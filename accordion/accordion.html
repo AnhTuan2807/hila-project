@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+        .accordion:after {
+            content: 'Click to open'; 
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "Click to close"; 
+        }
+    </style>
+</head>
+<body>
+    <button class="accordion">Item 1</button>
+    <div class="panel">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia placeat at magnam ut accusantium, similique nostrum blanditiis quo doloremque aspernatur, hic, tenetur repellendus voluptatum expedita beatae nesciunt vel delectus ipsa.</p>
+    </div>
+
+    <button class="accordion">Item 2</button>
+    <div class="panel">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia placeat at magnam ut accusantium, similique nostrum blanditiis quo doloremque aspernatur, hic, tenetur repellendus voluptatum expedita beatae nesciunt vel delectus ipsa.</p>
+    </div>
+
+    <button class="accordion">Item 3</button>
+    <div class="panel">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia placeat at magnam ut accusantium, similique nostrum blanditiis quo doloremque aspernatur, hic, tenetur repellendus voluptatum expedita beatae nesciunt vel delectus ipsa.</p>
+
+    <button class="accordion">Item 4</button>
+    <div class="panel">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia placeat at magnam ut accusantium, similique nostrum blanditiis quo doloremque aspernatur, hic, tenetur repellendus voluptatum expedita beatae nesciunt vel delectus ipsa.</p>
+    </div>
+
+    <script>
+        var accordion = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener("click", function() {
+            
+            this.classList.toggle("active");
+
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+    </script>
+</body>
+</html>
