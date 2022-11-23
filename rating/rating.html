@@ -30,37 +30,27 @@
     hr {
         border:3px solid #f1f1f1;
     }
-    .left-rating {
-        float: left;
-        width: 15%;
-        margin-top: 10px;
+    .flex-rating {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
     }
 
-    .right-rating {
-        float: left;
-        width: 70%;
-        margin-top: 10px;
-    }
-
-    .right {
-        text-align: right;
-    }
-
-    .row-rating:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    .left-rating div {
-        padding-bottom: 10px;
-    }
     #mr-1 {
         margin-bottom: 10px;
     }
-    .bar-container {
+    .flex-column1 {
+        width: 10%;
+    }
+    .flex-column3 {
+        width: 10%;
+        text-align: right;
+    }
+    .flex-column2 {
         width: 100%;
         background-color: #f1f1f1;
         color: white;
+        margin: 5px;
     }
     .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
     .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
@@ -78,39 +68,76 @@
         <span class="fa fa-star"></span>
         <p>4.1 average based on 254 reviews.</p>
         <hr/>
-        <div class="row-rating">
-            <div class="left-rating">
-                <div>5 star</div>
-                <div>4 star</div>
-                <div>3 star</div>
-                <div>2 star</div>
-                <div>1 star</div>
+        <div class="flex-rating">
+            <div class="flex-column1">5 start</div>
+            <div class="flex-column2">
+                <div class="bar-5"></div>
             </div>
-            <div class="right-rating">
-                <div class="bar-container">
-                    <div class="bar-5" id="mr-1"></div>
-                </div>
-                <div class="bar-container" id="mr-1">
-                    <div class="bar-4"></div>
-                </div>
-                <div class="bar-container" id="mr-1">
-                    <div class="bar-3"></div>
-                </div>
-                <div class="bar-container" id="mr-1">
-                    <div class="bar-2"></div>
-                </div>
-                <div class="bar-container">
-                    <div class="bar-1"></div>
-                </div>
+            <div class="flex-column3">150</div>
+        </div>
+        <div class="flex-rating">
+            <div class="flex-column1">4 start</div>
+            <div class="flex-column2">
+                <div class="bar-4"></div>
             </div>
-            <div class="left-rating right">
-                <div>150</div>
-                <div>63</div>
-                <div>15</div>
-                <div>6</div>
-                <div>20</div>
+            <div class="flex-column3">63</div>
+        </div>
+        <div class="flex-rating">
+            <div class="flex-column1">3 start</div>
+            <div class="flex-column2">
+                <div class="bar-3"></div>
             </div>
+            <div class="flex-column3">15</div>
+        </div>
+        <div class="flex-rating">
+            <div class="flex-column1">2 start</div>
+            <div class="flex-column2">
+                <div class="bar-2"></div>
+            </div>
+            <div class="flex-column3">6</div>
+        </div>
+        <div class="flex-rating">
+            <div class="flex-column1">1 start</div>
+            <div class="flex-column2">
+                <div class="bar-1"></div>
+            </div>
+            <div class="flex-column3">20</div>
         </div>
     </div> 
+
+    
 </body>
 </html>
+<!-- <div class="row-rating">
+    <div class="left-rating">
+        <div>5 star</div>
+        <div>4 star</div>
+        <div>3 star</div>
+        <div>2 star</div>
+        <div>1 star</div>
+    </div>
+    <div class="right-rating">
+        <div class="bar-container">
+            <div class="bar-5" id="mr-1"></div>
+        </div>
+        <div class="bar-container" id="mr-1">
+            <div class="bar-4"></div>
+        </div>
+        <div class="bar-container" id="mr-1">
+            <div class="bar-3"></div>
+        </div>
+        <div class="bar-container" id="mr-1">
+            <div class="bar-2"></div>
+        </div>
+        <div class="bar-container">
+            <div class="bar-1"></div>
+        </div>
+    </div>
+    <div class="left-rating right">
+        <div>150</div>
+        <div>63</div>
+        <div>15</div>
+        <div>6</div>
+        <div>20</div>
+    </div>
+</div> -->
